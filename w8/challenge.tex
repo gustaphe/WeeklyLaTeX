@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{intersections}
+
+\begin{document}
+
+\section{Emissions}
+CO2 emissions by country name (only fossil fuels and cement manufacture, metric
+tons per capita for values up to 2014), 2015 and 2018 figures are from
+Emissions Database for Global Atmospheric Research (EDGAR) and include all
+human activities leading to climate relevant emissions, except biomass/biofuel
+combustion (short-cycle carbon). For more information visit
+\href{https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions_per_capita}{Wikipedia}.
+
+\begin{table}
+        \centering
+        \caption{Emissions by country and year}
+        \input{table.tex}
+\end{table}
+
+\begin{figure}
+        \centering
+        \includegraphics{figure.tikz}\\
+        \caption{Emissions by country and year}
+
+\end{figure}
+
+\end{document}
