@@ -1,14 +1,17 @@
 \documentclass{article}
 \usepackage{booktabs}
 \usepackage{hyperref}
-\usepackage{siunitx}
+\usepackage[per-mode=symbol]{siunitx}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{tikzscale}
 \usepackage{pgfplots}
 
 \pgfplotsset{compat=1.17}
-\usetikzlibrary{intersections}
+\usetikzlibrary{intersections, backgrounds}
+
+\DeclareSIUnit\year{yr}
+\DeclareSIUnit\capita{c.}
 
 \begin{document}
 
@@ -22,7 +25,7 @@ combustion (short-cycle carbon). For more information visit
 
 \begin{table}
         \centering
-        \caption{Emissions by country and year}
+        \caption{Emissions (\si{\tonne\per\capita}) by country and year}
         \input{table.tex}
 \end{table}
 
@@ -30,7 +33,6 @@ combustion (short-cycle carbon). For more information visit
         \centering
         \includegraphics{figure.tikz}\\
         \caption{Emissions by country and year}
-
 \end{figure}
 
 \end{document}
