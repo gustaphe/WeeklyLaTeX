@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+\usepackage[swedish]{babel}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{background}
+\usepackage{coffee}
+
+\usetikzlibrary{calc}
+
+%\setmainfont{Liberation Serif}
+\newfontfamily\calfamily{EmbossedBlackWide}
+\pagestyle{empty}
+\renewcommand{\section}[1]{\begin{center}§ #1.\end{center}}
+
+
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgPosition{0,0}
+\SetBgColor{black}
+\SetBgContents{
+        \begin{tikzpicture}[overlay,remember picture]
+                \draw [line width=1,double, red!25] ($(current page.north west) + (2cm,-2cm) $) 
+                rectangle
+                ($(current page.south east) + (-2cm, 2cm) $);
+                \node[anchor=south west] at ($(current page.north west) + (2cm,-2cm)$) {Kungl. Maj:ts Nåd. Proposition Nr 110.};
+        \end{tikzpicture}
+}
+
+
+\begin{document}
+{\centering
+
+        {\calfamily
+                {\Huge Sveriges Riksdag}\\
+                {\Large Vid dess sammantrade,}\\ % I couldn't find a blackletter font with 'ä'
+        }
+        å Helgeandsholmen, Stockholm, mars månads 29e dag, Herrens år ett tusen
+        nio hundrade och tolv.\\[0.5cm]
+
+        \rule{5cm}{0.2ex}\\[0.5cm]
+        {\large\scshape Proposition}\\
+        För införandet i riksdagsordningen av kvinnlig rösträtt.\\[0.5cm]
+        \rule{5cm}{0.2ex}\\[0.5cm]
+}
+
+{\itshape
+        Under åberopande af bifogade i statsrådet förda protokoll vill Kungl.
+        Maj:t härmed till Riksdagens Pröfning i grundlagsenlig ordning
+        framlägga följande
+}
+
+Att lydelsen i riksdagsordningens §§ 9, 16, 19 och 21 ändras enl.
+
+\section{9}
+Till ledamöter i första kammaren kunna endast väljas män och kvinnor, som
+uppnått  \rule[0.5ex]{2cm}{0.2ex} sin befattning.
+
+\section{16}
+Valrätt tillkommer enhvar välfrejdad svensk medborgare, såväl man som kvinna,
+från och med kalenderåret näst efter det, hvarunder han uppnått tjugufyra års
+ålder, dock ej
+\begin{enumerate}[label=\alph*)]
+        \item den som står under förmynderskap eller är i konkurstillstånd;
+        \item gift kvinna, som ej vunnit boskillnad och hvilkens man är i
+                konkurstillstånd;
+        \item den som häftar för understöd, hvilket under löpande eller
+                sistförflutna kalenderåret af fattigvårdssamhälle tilldelats
+                den häftande själf eller dennes hustru eller minderåriga barn;
+        \item gift kvinna, hvilkens man häftar för understöd, som under löpande
+                eller sistförflutna kalenderåret af fattigvårdssamhälle
+                tilldelats henne eller makarnas minderåriga barn;
+        \item den som icke erlagt de honom påförda utskylder till stat och
+                kommun, hvilka förfallit till betalning under de tre
+                sistförflutna kalenderåren ;
+        \item gift kvinna, som ej vunnit boskillnad och hvilkens man icke
+                erlagt de honom påförda utskjdder till stat och kommun, hvilka
+                förfallit till betalning under de tre sistförflutna
+                kalenderåren;
+        \item värnpliktig, som icke fullgjort de honom till och med utgången af
+                sistförflutna kalenderåret åliggande värnpliktsöfningar.  
+\end{enumerate}
+
+Till efterrättelse vid val skall finnas röstlängd; och skall, på sätt i
+vallagen finnes närmare bestämdt, valrätten grundas på förhållandena vid tiden
+för röstlängdens tillkomst, ändå att förändring före valet inträffar.
+
+\section{19}
+Till ledamöter i andra kammaren kunna endast utses män och kvinnor, som äga
+valrätt inom valkretsen eller, där fråga är om stad, bestående af flera
+valkretsar, inom någon af dessa.
+
+\section{21}
+Riksdagsman \rule[0.5ex]{2cm}{0.2ex} tre lagtima riksdagar.  Kvinna är
+berättigad att afsäga sig riksdagsmannauppdrag, äfven om icke något af nu
+nämnda skäl är för handen.
+
+Afsägelse \rule[0.5ex]{2cm}{0.2ex} Konungens befallningshafvande.
+
+Kungl. Maj:t förblifver Riksdagen med all Kungl. nåd och ynnest städse
+välbevågen.
+
+\vspace{2cm}
+{\centering\Huge\scshape
+        Gustaf.\\
+}
+
+{\raggedleft\itshape
+        Gust. Sandström.\\
+}
+
+\cofeAm{0.5}{1}{50}{0cm}{-13cm}
+
+\end{document}
