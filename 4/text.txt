@@ -1,0 +1,7 @@
+CO2 emissions by country name (only fossil fuels and cement manufacture, metric tons per capita for values up to 2014), 2015 and 2018 figures are from Emissions Database for Global Atmospheric Research (EDGAR) and include all human activities leading to climate relevant emissions, except biomass/biofuel combustion (short-cycle carbon). For more information visit \href{https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions_per_capita}{Wikipedia}.
+
+Country;2010;2011;2012;2013;2014;2015;2018
+Qatar;40.7;41.2;44.6;37.8;45.4;39.4;38.2 
+United States;17.4;17.0;16.3;16.3;16.5;16.3;16.1
+Singapore;11.0;8.7;6.8;10.3;10.3;9.3;9.7 
+China;6.6;7.2;7.4;7.6;7.5;7.7;8.0 
