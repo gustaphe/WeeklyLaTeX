@@ -7,8 +7,8 @@
 \usepackage{graphicx}
 \usepackage{microtype}
 
-\setmainfont{Adobe Garamond Pro}
-\setsansfont{Lucida Sans Std}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
 
 \definecolor{emphasis}{rgb}{0.4,0.1,0.1}
 %\definecolor{emphasis}{rgb}{0.7,0.1,0.1} % so much fun to be had with theming
@@ -26,80 +26,86 @@
 
 \begin{document}
 \noindent\begin{minipage}[t]{0.1\textwidth} % In a real case I would probably use fancyheader or something, but that's boring
-                \vspace{0pt}
-                \rotatebox{90}{\parbox{0.9\textheight}{\raggedleft
-                                {\fontsize{48pt}{0pt} \textsf{\textcolor{emphasis}{Carnaroli Risotto}}}\\
-                                {\large on Heirloom Tomato \& Basil Salad}\\[0.5ex]
-                                \arabic{page}\hspace{1em}\rule[0.5ex]{0.8\textheight}{0.05ex}
-                }}
+        \vspace{0pt}
+        \rotatebox{90}{\parbox{0.9\textheight}{\raggedleft
+                        {\fontsize{48pt}{0pt} \textsf{\textcolor{emphasis}{Carnaroli Risotto}}}\\
+                        {\large on Heirloom Tomato \& Basil Salad}\\[0.5ex]
+                        \arabic{page}\hspace{1em}\rule[0.5ex]{0.8\textheight}{0.05ex}
+        }}
 \end{minipage}\hfill
 \begin{minipage}[t][0.9\textheight]{0.8\textwidth}
-                \vspace{0pt}
-                \noindent\textit{\textcolor{emphasis}{
-                                Carnaroli rice is native to the Novara and Vercelli regions of northern Italy. 
-                                The grains are slightly larger than the more common arborio rice, which means they absorb more liquid, resulting in a slightly creamier risotto. 
-                                \textbf{Serves 6}
-                }}
+        \vspace{0pt}
+        \noindent\textit{\textcolor{emphasis}{
+                        Carnaroli rice is native to the Novara and Vercelli
+                        regions of northern Italy.  The grains are slightly
+                        larger than the more common arborio rice, which means
+                        they absorb more liquid, resulting in a slightly
+                        creamier risotto.
+                        \textbf{Serves 6}
+        }}
 
-                \vspace{1cm}
-                \begin{minipage}[t]{0.5\textwidth}
-                        \vspace{0pt}\raggedright
-                        \begin{tabular}{Sp{5cm}}
+        \vspace{1cm}
+        \begin{minipage}[t]{0.5\textwidth}
+                \vspace{0pt}\raggedright
+                \begin{tabular}{Sp{5cm}}
         & \textsf{\textcolor{emphasis}{Tomato and Basil Salad}} \\
-                                6 & large heirloom tomatoes (different colours if possible) \\
-                                1.42 & \si{dl} basil leaves \\ % I took the liberty of converting to real units
-                                53.27 & \si{ml} balsamic vinegar from Modena, Italy, or Venturi-Schulze (optional) \\
-                        \end{tabular}
-                \end{minipage}\hfill
-                \begin{minipage}[t]{0.5\textwidth}
-                        \vspace{0pt}\raggedleft
-                        \begin{tabular}{Sp{5cm}}
+                        6 & large heirloom tomatoes (different colours if possible) \\
+                        1.42 & \si{dl} basil leaves \\ % I took the liberty of converting to real units
+                        53.27 & \si{ml} balsamic vinegar from Modena, Italy, or Venturi-Schulze (optional) \\
+                \end{tabular}
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.5\textwidth}
+                \vspace{0pt}\raggedleft
+                \begin{tabular}{Sp{5cm}}
         & \textsf{\textcolor{emphasis}{Carnaroli Risotto}} \\
-                                1.137 & \si{l} water \\
-                                35.52 & \si{ml} extra-virgin olive oil \\
-                                0.5 & medium onion, minced \\
-                                1 & clove of garlic, minced \\
-                                1.42 & \si{dl} carnaroli rice \\
-                                0.71 & \si{dl} dry white wine \\
-                                35.52 & \si{ml} butter \\
-                                0.71 & \si{dl} grated Parmesan cheese \\
-                        \end{tabular}
-                \end{minipage}
-                \vspace{1cm}
+                        1.137 & \si{l} water \\
+                        35.52 & \si{ml} extra-virgin olive oil \\
+                        0.5 & medium onion, minced \\
+                        1 & clove of garlic, minced \\
+                        1.42 & \si{dl} carnaroli rice \\
+                        0.71 & \si{dl} dry white wine \\
+                        35.52 & \si{ml} butter \\
+                        0.71 & \si{dl} grated Parmesan cheese \\
+                \end{tabular}
+        \end{minipage}
+        \vspace{1cm}
 
-                \begin{instructions}{Tomato and Basil Salad}
-                        Slice tomatoes \SI{6.35}{mm} thick and divide among six plates. Season
-                        with salt and pepper, then set aside. 
-                \end{instructions}
+        \begin{instructions}{Tomato and Basil Salad}
+                Slice tomatoes \SI{6.35}{mm} thick and divide among six plates.
+                Season with salt and pepper, then set aside.
+        \end{instructions}
 
-                \begin{instructions}{Carnaroli Risotto} 
-                        Heat water in a medium pot on medium heat and keep it at a gentle
-                        simmer, turning down the heat if necessary. 
+        \begin{instructions}{Carnaroli Risotto}
+                Heat water in a medium pot on medium heat and keep it at a
+                gentle simmer, turning down the heat if necessary.
 
-                        Heat oil in a large heavy-bottomed pot on medium-high heat. Add onion
-                        and garlic, then sauté, stirring, for about \SI{5}{min}, or until onion
-                        is translucent.  Season well with salt and pepper. Stir in rice and
-                        cook for another \SI{4}{min}, or until the grains are well coated with
-                        oil. Add wine and \SI{2.841}{dl} of the simmering water, stirring
-                        constantly until the rice absorbs the liquid. 
+                Heat oil in a large heavy-bottomed pot on medium-high heat. Add
+                onion and garlic, then sauté, stirring, for about \SI{5}{min},
+                or until onion is translucent.  Season well with salt and
+                pepper. Stir in rice and cook for another \SI{4}{min}, or until
+                the grains are well coated with oil. Add wine and
+                \SI{2.841}{dl} of the simmering water, stirring constantly
+                until the rice absorbs the liquid.
 
-                        Gradually add the remaining water, about \SI{1.4205}{dl} at a time, so
-                        rice is always covered in liquid. Keep stirring. (It should take about
-                        \SI{18}{min} for the rice to be perfectly cooked.  Taste it at various
-                        intervals near the end. You may need a little more or a little less
-                        water, depending on the age of the rice.) When all the liquid is
-                        absorbed and rice is al dente, stir in butter and Parmesan.  Stir
-                        vigorously to emulsify everything together. Season if necessary.
-                \end{instructions}
+                Gradually add the remaining water, about \SI{1.4205}{dl} at a
+                time, so rice is always covered in liquid. Keep stirring. (It
+                should take about \SI{18}{min} for the rice to be perfectly
+                cooked.  Taste it at various intervals near the end. You may
+                need a little more or a little less water, depending on the age
+                of the rice.) When all the liquid is absorbed and rice is al
+                dente, stir in butter and Parmesan.  Stir vigorously to
+                emulsify everything together. Season if necessary.
 
-                \begin{instructions}{To Serve} 
-                        Divide risotto evenly on top of plated tomatoes, leaving at least
-                        one-third of the colourful tomatoes exposed. Place a few basil leaves
-                        around each plate and garnish with a drizzle of balsamic vinegar
-                        (optional).
-                \end{instructions} 
-                
-                \vfill
-                {\centering\textit{\textcolor{emphasis}{Fresh Shiet}}\\}
+        \end{instructions}
+
+        \begin{instructions}{To Serve}
+                Divide risotto evenly on top of plated tomatoes, leaving at
+                least one-third of the colourful tomatoes exposed. Place a few
+                basil leaves around each plate and garnish with a drizzle of
+                balsamic vinegar (optional).
+        \end{instructions}
+
+        \vfill
+        {\centering\textit{\textcolor{emphasis}{Fresh Shiet}}\\}
 \end{minipage}
 \end{document}
