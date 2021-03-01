@@ -1,0 +1,27 @@
+\documentclass[twoside,twocolumn,openright]{article}
+
+\usepackage[papersize={21.2725cm,26.6225cm},outer=7cm]{geometry} % magazine "standard size", source : http://momentumpress.com/sccc/LD/Resources/MagazinePageSize.pdf
+\usepackage[latin,swedish]{babel}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{lettrine}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\pagestyle{empty}
+\setcounter{page}{8}
+
+\begin{document}
+\lettrine[lines=3]{L}{ite} väl mycket överhäng här vad?\lipsum[1]
+\begin{wrapfigure}{o}{0.1\textwidth}
+        \hspace*{-0.4\textwidth}
+        \begin{minipage}{0.5\textwidth}
+                \large\itshape ``Många av våra plantor kommer faktiskt panta alla
+                förenta lås ridå exteriörer och interiörer, nyktra döda och
+                ljugare pekar ändå i cerat.''
+        \end{minipage}
+\end{wrapfigure}
+
+\lipsum\lipsum[8]
+\end{document}
