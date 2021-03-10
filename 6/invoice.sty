@@ -1,0 +1,68 @@
+\ProvidesPackage{invoice}
+
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{booktabs}
+\RequirePackage{xfp}
+\RequirePackage{siunitx}
+
+\pagestyle{empty}
+
+\newcommand{\header}[1]{
+        \noindent\begin{minipage}[t][3cm]{0.5\textwidth}
+                \flushleft
+                {\Huge\sffamily\scshape Business Inc.}\\[1ex]
+                {\large 42 Address Street}\\
+                {\large Towne upon River, ZIP 1337}\\
+        \end{minipage}\hfill
+        \begin{minipage}[t][3cm]{0.3\textwidth}
+                \raggedleft
+                {\huge\sffamily Invoice}\\[0.5ex]
+                {\large \#\num{#1}}\\
+                {\today}\\
+        \end{minipage}
+}
+
+\newcommand{\addressee}[3]{
+        {\flushleft
+                {\huge Your reference:}\\[1ex]
+                {\large #1}\\
+                {#2}\\
+                {#3}\\
+        }
+        \vspace{1cm}
+}
+
+\renewcommand{\arraystretch}{1.5}
+\newcounter{grandtotal}
+\newenvironment{itemtable}{
+        \begin{center}
+                \setcounter{grandtotal}{0}
+                \begin{tabular}{p{5cm}lrr}\toprule
+                        \textsf{\textbf{Description}} &
+                        \textsf{\textbf{Qty}} &
+                        \textsf{\textbf{price / USD}} &
+                        \textsf{\textbf{Total / USD}} \\\midrule
+                        }{
+                        \cmidrule{4-4}
+                        \multicolumn{3}{r}{Total:} & \num{\thegrandtotal} \\
+                        \multicolumn{3}{r}{Tax:} & \SI{24}{\percent} \\
+                        \multicolumn{3}{r}{\textsf{\textbf{Grand total:}}} & \num{\fpeval{1.24*\thegrandtotal}} \\\bottomrule
+                \end{tabular}
+        \end{center}
+}
+
+\newcommand{\invoiceitem}[3]{
+        #1 & \num{#2} & \num{#3} & \num{\fpeval{#2*#3}}\addtocounter{grandtotal}{\fpeval{#2*#3}} \\
+}
+
+\newcommand{\footer}{
+        \vfill
+
+        \noindent\begin{minipage}{0.5\textwidth}
+                {{\large\bfseries Pay by}\\[0.5ex]
+                the first bank Monday after next full moon or August 1, whichever is first}\\[1ex]
+                {{\large\bfseries Address your payment to}\\[0.5ex]
+                address as above, or give cash to the men with crow bars we send when the pay-by date approaches}\\[2ex]
+                {Please tip your man-with-a-crow-bar!} {\scriptsize or else\ldots}\\
+        \end{minipage}
+}
