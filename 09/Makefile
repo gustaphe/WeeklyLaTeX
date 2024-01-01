@@ -1,12 +1,12 @@
 .PHONY : all
 
 
-all : challenge.pdf preview.pdf
+all : solution.pdf preview.pdf
 
 %.pdf : %.tex
 	xelatex --file-line-error --interaction=nonstopmode $<
 
-preview.pdf : challenge.pdf
+preview.pdf : solution.pdf
 	gs -o $@ \
 		-sDEVICE=pdfwrite \
 		-c "[/CropBox [45 45 550 374]" \

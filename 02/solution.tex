@@ -1,11 +1,10 @@
 \documentclass[a4paper]{article}
-\usepackage[swedish]{babel}
+\usepackage{polyglossia}
 \usepackage{tikz}
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{background}
-\usepackage{coffee}
 
 \usetikzlibrary{calc}
 
@@ -14,6 +13,7 @@
 \pagestyle{empty}
 \renewcommand{\section}[1]{\begin{center}§ #1.\end{center}}
 
+\setdefaultlanguage[]{swedish}
 
 \SetBgScale{1}
 \SetBgAngle{0}
@@ -21,7 +21,7 @@
 \SetBgColor{black}
 \SetBgContents{
         \begin{tikzpicture}[overlay,remember picture]
-                \draw [line width=1,double, red!25] ($(current page.north west) + (2cm,-2cm) $) 
+                \draw [line width=1,double, red!25] ($(current page.north west) + (2cm,-2cm) $)
                 rectangle
                 ($(current page.south east) + (-2cm, 2cm) $);
                 \node[anchor=south west] at ($(current page.north west) + (2cm,-2cm)$) {Kungl. Maj:ts Nåd. Proposition Nr 110.};
@@ -79,7 +79,7 @@ från och med kalenderåret näst efter det, hvarunder han uppnått tjugufyra å
                 förfallit till betalning under de tre sistförflutna
                 kalenderåren;
         \item värnpliktig, som icke fullgjort de honom till och med utgången af
-                sistförflutna kalenderåret åliggande värnpliktsöfningar.  
+                sistförflutna kalenderåret åliggande värnpliktsöfningar.
 \end{enumerate}
 
 Till efterrättelse vid val skall finnas röstlängd; och skall, på sätt i
@@ -109,7 +109,5 @@ välbevågen.
 {\raggedleft\itshape
         Gust. Sandström.\\
 }
-
-\cofeAm{0.5}{1}{50}{0cm}{-13cm}
 
 \end{document}

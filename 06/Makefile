@@ -1,7 +1,7 @@
 .PHONY : all clean
-all : challenge.pdf
+all : solution.pdf
 
-challenge.pdf : challenge.tex invoice.sty
+solution.pdf : solution.tex invoice.sty
 	xelatex --file-line-error --interaction=nonstopmode $<
 
 clean :

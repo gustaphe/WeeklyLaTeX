@@ -1,5 +1,5 @@
 #!/bin/julia
-using PrettyTables, Plots, Latexify, Unitful, UnitfulLatexify, LaTeXStrings, LsqFit
+using PrettyTables, Plots, Latexify, Unitful, UnitfulLatexify, LaTeXStrings, LsqFit, ColorSchemes
 pgfplotsx()
 
 years = [2010 2011 2012 2013 2014 2015 2018]
@@ -11,13 +11,14 @@ emissions = [
              6.6 7.2 7.4 7.6 7.5 7.7 8.0;
             ].*u"one";
 
-colors = [
-          colorant"#6C1D45", # Qatar purple
-          colorant"#041E42", # US blue
-          colorant"#EF3340", # Singapore pale red?
-          #colorant"#C8102E", # China clear red
-          colorant"#FCE300", # China yellow
-         ]
+colors = getindex.(get.(Ref(colorschemes), Symbol.("flag_", ["qa", "us", "sg", "cn"]), nothing), [1,3,1,1])
+#colors = [
+#          colorant"#6C1D45", # Qatar purple
+#          colorant"#041E42", # US blue
+#          colorant"#EF3340", # Singapore pale red?
+#          #colorant"#C8102E", # China clear red
+#          colorant"#FCE300", # China yellow
+#         ]
 
 @. model(x,p) = p[1]*(x-2010) + p[2] # Linear fit
 
@@ -31,10 +32,10 @@ set_default(unitformat=:siunitx,fmt="%.2g")
 
 open("table.tex","w") do f
     pretty_table(f,
-                 hcat(countries, emissions,first.(getproperty.(fits,:param))),
-                 hcat("Country",string.(years),"Growth / \\si{\\tonne\\per\\capita\\per\\year}"),
-                 backend=:latex,tf=tf_latex_booktabs,
-                 formatters = (v,i,j) -> latexify(v),
+                 hcat(countries, emissions, first.(getproperty.(fits,:param)));
+                 header=["Country", string.(years)..., "Growth / t/c./y"],
+                 backend=Val(:latex), tf=tf_latex_booktabs,
+                 #formatters = (v,i,j) -> LatexCell(latexify(v)),
                  wrap_table=false,
                 )
 end
@@ -43,7 +44,7 @@ pl = plot(
           years',
           emissions',
           label=hcat(countries...),
-          color = colors',
+          color=reshape(colors, 1, :),
           xlabel=LaTeXString("Year"),
           ylabel=LaTeXString("Emissions / \\si{\\tonne\\per\\capita}"),
           st=:scatter,legend=:right,
@@ -51,7 +52,7 @@ pl = plot(
          )
 for k in eachindex(fits)
     f = fits[k]
-    plot!(pl,x->model(x,f.param),color=colors[k],label=false)
+    plot!(pl,x->model(x,f.param),color=colors[k],label=false, seriestype=:path)
 end
 
 
